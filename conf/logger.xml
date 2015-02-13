@@ -1,0 +1,28 @@
+<configuration>
+
+    <conversionRule conversionWord="coloredLevel" converterClass="play.api.Logger$ColoredLevel" />
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${application.home}/logs/skeleton.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${application.home}/logs/skeleton.log.%d{yyyy-MM-dd_HH}</fileNamePattern>
+        </rollingPolicy>
+        <encoder>
+            <pattern>%date - [%level] - %logger{5}: %message%n%xException</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="FILE-ASYNC" class="ch.qos.logback.classic.AsyncAppender">
+        <appender-ref ref="FILE" />
+        <queueSize>10000</queueSize>
+        <discardingThreshold>0</discardingThreshold>
+    </appender>
+
+    <logger name="play" level="INFO" />
+    <logger name="application" level="INFO" />
+
+    <root level="INFO">
+        <appender-ref ref="FILE" />
+    </root>
+
+</configuration>

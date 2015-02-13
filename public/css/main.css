@@ -1,0 +1,23 @@
+html {
+    background: #eee;
+}
+
+header h1 {
+    padding: 0.4em 1.1em;
+    color: white;
+    font-weight: normal;
+    font-size: 24px;
+}
+
+.content {
+    background-color: #fff;
+    padding: 60px 20px 60px;
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    min-height: 10px;
+}
+

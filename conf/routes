@@ -1,0 +1,5 @@
+GET         /                         controllers.Application.index()
+GET         /setup.js                 controllers.Application.setup()
+GET         /ws                       controllers.Application.ws
+GET         /assets/*file             controllers.Assets.at(path="/public", file)
+GET         /webjars/*file            controllers.WebJarAssets.at(file)
